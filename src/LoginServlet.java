@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -40,7 +41,9 @@ public class LoginServlet extends HttpServlet {
                 out.print(takeInfo);
                 break;
             case "5":
-
+                String qRegisterInfo = questionRegister(request, response);
+                out.print(qRegisterInfo);
+            case "6":
             default:
                 break;
         }
@@ -88,11 +91,14 @@ public class LoginServlet extends HttpServlet {
     protected String questionRegister(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding(BM);
         response.setCharacterEncoding(BM);
+        UserDao dao = new UserDaoImpl();
         String tag_one = request.getParameter("tag_one");
         String tag_two = request.getParameter("tag_two");
         String tag_three = request.getParameter("tag_three");
         String Title = request.getParameter("title");
-        Question question = new Question(tag_one, tag_two, tag_three, Title);
+        String description = request.getParameter("Description");
+        String askername = request.getParameter("username");
+        Question question = new Question(tag_one, tag_two, tag_three, Title , description, askername);
         return Qservice.register(question);
     }
 
@@ -115,7 +121,18 @@ public class LoginServlet extends HttpServlet {
         request.setCharacterEncoding(BM);
         response.setCharacterEncoding(BM);
         int ID = Integer.valueOf(request.getParameter("ID"));
-        return Qservice.taktQuestion(ID);
+        return Qservice.takeQuestion(ID);
     }
 
+    protected String answerQuestion(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        request.setCharacterEncoding(BM);
+        response.setCharacterEncoding(BM);
+        String username = request.getParameter("username");
+        String title = request.getParameter("title");
+        String answer = request.getParameter("answer");
+        Question question = Qservice.takeQuestion(title);
+        Answer answer1 = new Answer();
+        answer1.setAnswer(answer);
+        return null;
+    }
 }

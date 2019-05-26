@@ -4,4 +4,6 @@ public interface UserService {
     public String checkLogin(User user);
     //注册用户
     public String register(User user);
+    //查找用户
+    public User findUser(String username);
 }

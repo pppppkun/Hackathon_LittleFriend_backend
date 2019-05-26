@@ -34,4 +34,12 @@ public class UserServiceImpl implements UserService {
         return "注册成功";
     }
 
+    @Override
+    public User findUser(String username) {
+        List<User> list = dao.findAll();
+        for(User user:list){
+            if(user.getUsername().equals(username)) return user;
+        }
+        return null;
+    }
 }

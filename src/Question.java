@@ -6,20 +6,29 @@ public class Question {
     private String tag_TWO;
     private String tag_THREE;
     private String ID;
-    private boolean hassolved;
     private String Title;
-    private List<User> whoAnswer;
-    private List<Answer> answers;
+    private String description;
+    private boolean hassolved;
+    private String whoasked;
 
-    public Question(){
+
+    public Question() {
 
     }
 
-    public Question(String one,String two,String three,String title){
-         tag_ONE=one;
-         tag_TWO=two;
-         tag_THREE=three;
-         this.Title = title;
+    public Question(String one, String two, String three, String title, String description,String us) {
+        tag_ONE = one;
+        tag_TWO = two;
+        tag_THREE = three;
+        this.Title = title;
+        this.description = description;
+        whoasked = us;
+    }
+
+    public Question(String one, String two, String three){
+        tag_ONE = one;
+        tag_TWO = two;
+        tag_THREE = three;
     }
 
     public String getTitle() {
@@ -63,16 +72,33 @@ public class Question {
         this.ID = ID;
     }
 
-    public boolean tagEqual(Question q){
-        if(this.tag_ONE.equals(q.getTag_ONE())&&this.tag_TWO.equals(q.getTag_TWO())&&this.tag_THREE.equals(q.getTag_THREE())){
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public boolean tagEqual(Question q) {
+        if (this.tag_ONE.equals(q.getTag_ONE()) && this.tag_TWO.equals(q.getTag_TWO()) && this.tag_THREE.equals(q.getTag_THREE())) {
             return true;
-        }
-        else return false;
+        } else return false;
     }
 
     public boolean isHassolved() {
         return hassolved;
     }
 
+    public void setHassolved(boolean hassolved) {
+        this.hassolved = hassolved;
+    }
 
+    public String getWhoasked() {
+        return whoasked;
+    }
+
+    public void setWhoasked(String whoasked) {
+        this.whoasked = whoasked;
+    }
 }
