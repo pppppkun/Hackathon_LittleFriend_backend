@@ -1,0 +1,17 @@
+
+Isquid:S1068
+"-Remove this unused "whoAnswer" private field.(†ν¦ώÿÿÿÿ
+Xsquid:S11269"AReplace this if-then-else statement by a single return statement.(›Η
+fsquid:S00100 "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©ωρ½
+ksquid:S00100$"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬Άγόÿÿÿÿ
+esquid:S00100("NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ιªp
+fsquid:S00100,"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ϋ’·¨
+fsquid:S001000"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Σ–υ
+fsquid:S001004"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨νδκ
+jsquid:S00116"RRename this field "tag_ONE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ΧΑ®Μ
+osquid:S00116"RRename this field "tag_TWO" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©η‹όÿÿÿÿ
+lsquid:S00116"TRename this field "tag_THREE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›Ϋσσ
+hsquid:S00116	"PRename this field "Title" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(γ¨„ζ
+isquid:S00117,"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ϋ’·¨
+isquid:S001170"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Σ–υ
+isquid:S001174"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨νδκ

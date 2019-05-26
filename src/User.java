@@ -1,9 +1,13 @@
+import java.util.ArrayList;
+
 public class User {
     private String username;
     private String password;
     private String school;
     private String major;
     private boolean LOGIN=false;
+    private ArrayList<Question> Asked;
+    private ArrayList<Question> Solved;
 
     public String getUsername() {
         return username;

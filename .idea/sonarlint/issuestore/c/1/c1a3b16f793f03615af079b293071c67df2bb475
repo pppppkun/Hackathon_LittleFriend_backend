@@ -1,0 +1,7 @@
+
+usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÈÄ¾Ôùÿÿÿÿ
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ú¢äëýÿÿÿÿ
+Vsquid:UselessImportCheck"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ
+Wsquid:UselessImportCheck"3Remove this unused import 'java.sql.DriverManager'.(“£°
+?squid:S1148,"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+?squid:S1148B"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ

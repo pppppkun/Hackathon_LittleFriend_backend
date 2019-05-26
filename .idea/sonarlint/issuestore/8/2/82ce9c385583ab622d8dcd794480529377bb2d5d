@@ -1,0 +1,4 @@
+
+usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ˆÒ¤´üÿÿÿÿ
+‡squid:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ÓøÌØ
+isquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓøÌØ

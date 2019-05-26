@@ -1,0 +1,27 @@
+
+­%squid:RedundantThrowsDeclarationCheck4"wRemove the declaration of thrown exception 'javax.servlet.ServletException', as it cannot be thrown from method's body.(¥Í¿÷şÿÿÿÿ
+¨%squid:RedundantThrowsDeclarationCheckD"wRemove the declaration of thrown exception 'javax.servlet.ServletException', as it cannot be thrown from method's body.(Øó˜ 
+­%squid:RedundantThrowsDeclarationCheckP"wRemove the declaration of thrown exception 'javax.servlet.ServletException', as it cannot be thrown from method's body.(­´­ãÿÿÿÿÿ
+^squid:S1192"GDefine a constant instead of duplicating this literal "UTF-8" 10 times.(ş¢¢á
+Jsquid:S1989"3Add a "try/catch" block for "setCharacterEncoding".(ş¢¢á
+Dsquid:S1989"(Add a "try/catch" block for "getWriter".(ïô†úÿÿÿÿ
+Isquid:S1989"-Add a "try/catch" block for "userCheckLogin".(³Øùúşÿÿÿÿ
+Isquid:S1989"-Add a "try/catch" block for "userCheckLogin".(³Øùúşÿÿÿÿ
+Gsquid:S1989"+Add a "try/catch" block for "userRegister".(£õ‰Îÿÿÿÿÿ
+Gsquid:S1989"+Add a "try/catch" block for "userRegister".(£õ‰Îÿÿÿÿÿ
+Gsquid:S1989""+Add a "try/catch" block for "questionFind".(õ—ƒûÿÿÿÿ
+Gsquid:S1989""+Add a "try/catch" block for "questionFind".(õ—ƒûÿÿÿÿ
+@squid:S19890"$Add a "try/catch" block for "doGet".(®Ó‘ûÿÿÿÿÿ
+@squid:S19890"$Add a "try/catch" block for "doGet".(®Ó‘ûÿÿÿÿÿ
+b
+squid:S128!"LEnd this switch case with an unconditional break, return or throw statement.(¡È›
+bsquid:CommentedOutCodeLine*"<This block of commented-out lines of code should be removed.(æÃªå
+O
+squid:S106+"9Replace this use of System.out or System.err by a logger.(‰Œ›¾
+Ysquid:S1854""=Remove this useless assignment to local variable "questions".(õ—ƒûÿÿÿÿ
+nsquid:S00117S"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌÚğÏúÿÿÿÿ
+nsquid:S00117T"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ†×µÿÿÿÿÿ
+hsquid:S00117U"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šöZ
+isquid:S00117V"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇîÅÓ
+Vsquid:S1161":Add the "@Override" annotation above this method signature(Ïû©Öûÿÿÿÿ
+Qsquid:S1161/":Add the "@Override" annotation above this method signature(‹¨¯¿
