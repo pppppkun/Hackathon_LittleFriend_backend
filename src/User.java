@@ -5,6 +5,7 @@ public class User {
     private String password;
     private String school;
     private String major;
+    private String id;
     private boolean LOGIN=false;
     private ArrayList<Question> Asked;
     private ArrayList<Question> Solved;
@@ -35,6 +36,14 @@ public class User {
 
     public String getSchool(){
         return school;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public void setMajor(String major) {

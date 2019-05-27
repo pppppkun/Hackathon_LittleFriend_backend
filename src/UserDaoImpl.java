@@ -4,7 +4,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class UserDaoImpl implements UserDao {
 
@@ -43,6 +45,34 @@ public class UserDaoImpl implements UserDao {
 
         }
         return list;
+    }
+
+    @Override
+    public Map<String, User> findUserBaseUsername(){
+        Map<String,User> map = new HashMap<>();
+        try {
+            //通过工具类获得连接
+            connection = JDBCUtils.getConnetion();
+            //通过连接对象获取操作数据库的对象
+            String sql="SELECT * FROM user;";//查询sql语句
+            ps=connection.prepareStatement(sql);
+            //返回查询结果集
+            rs=ps.executeQuery();
+            //遍历rs，并封装数据
+
+            while(rs.next()) {
+                User user = new User();
+                user.setUsername(rs.getString(2));
+                user.setId(rs.getString(1));
+                map.put(user.getUsername(), user);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally{
+            JDBCUtils.close(connection, ps, rs);//关闭连接
+        }
+        return map;
     }
 
     @Override

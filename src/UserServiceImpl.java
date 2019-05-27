@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Map;
 
 public class UserServiceImpl implements UserService {
 
@@ -36,10 +37,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findUser(String username) {
-        List<User> list = dao.findAll();
-        for(User user:list){
-            if(user.getUsername().equals(username)) return user;
-        }
-        return null;
+        Map<String , User> map = dao.findUserBaseUsername();
+        return map.get(username);
     }
+
+
+
+
 }

@@ -15,6 +15,7 @@ public class LoginServlet extends HttpServlet {
     private static final String BM = "UTF-8";
     private static final UserService Uservice = new UserServiceImpl();
     private static final QuestionService Qservice = new QuestionServiceImpl();
+    private static final AnswerService Aservice = new AnswerServiceImpl();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -25,25 +26,34 @@ public class LoginServlet extends HttpServlet {
         //把传来的数据封装进javabean中
         switch (sign) {
             case "1":
+                //登录操作
                 String loginInfo = userCheckLogin(request, response);
                 out.print(loginInfo);
                 break;
             case "2":
+                //注册操作
                 String registerInfo = userRegister(request, response);
                 out.print(registerInfo);
                 break;
             case "3":
+                //客户端传过来三个tag和一个intent表明需要类问题，是否被回答，服务端返回一个问题
                 String findquestionInfo = questionFind(request, response);
                 out.print(findquestionInfo);
                 break;
             case "4":
+                //根据题目的ID，直接返回一个题目
                 String takeInfo = questiontake(request, response);
                 out.print(takeInfo);
                 break;
             case "5":
+                //注册一个题目，对方提供3个tag title description username
                 String qRegisterInfo = questionRegister(request, response);
                 out.print(qRegisterInfo);
             case "6":
+                //注册一个回答，对方提供回答内容，题目title，回答者的username
+                String aRegisterInfo = answerQuestion(request, response);
+                out.print(aRegisterInfo);
+                break;
             default:
                 break;
         }
@@ -131,8 +141,8 @@ public class LoginServlet extends HttpServlet {
         String title = request.getParameter("title");
         String answer = request.getParameter("answer");
         Question question = Qservice.takeQuestion(title);
-        Answer answer1 = new Answer();
-        answer1.setAnswer(answer);
-        return null;
+        User user = Uservice.findUser(username);
+        Answer answer1 = new Answer(answer,question.getID(),user.getId());
+        return Aservice.register(answer1);
     }
 }

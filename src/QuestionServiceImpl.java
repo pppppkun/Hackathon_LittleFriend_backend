@@ -36,14 +36,10 @@ public class QuestionServiceImpl implements QuestionService {
         a.append(question.getTag_ONE()+" "+question.getTag_TWO()+" "+question.getTag_THREE()+" "+question.getTitle()+" "+question.getDescription());
         return a.toString();
     }
-
-
+    
     public Question takeQuestion(String title) {
         Map<String, Question> map = dao.findBaseTitle();
         Question question = map.get(title);
         return question;
     }
-
-
-
 }
