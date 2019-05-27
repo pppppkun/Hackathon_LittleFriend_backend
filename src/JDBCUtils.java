@@ -20,7 +20,7 @@ public class JDBCUtils {
         //创建连接数据库的路径
         String url = "jdbc:mysql://localhost:3306/hackathondb";
         //通过url获得与数据库的连接
-        connection = DriverManager.getConnection(url,"root","");
+        connection = DriverManager.getConnection(url,"root","hackathon");
         return connection;
     }
 

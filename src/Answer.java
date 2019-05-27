@@ -6,6 +6,16 @@ public class Answer {
 
     private int answersID;
 
+    private int value = 10;
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+
     public Answer(String answer, int questionID, int answersID) {
         this.answer = answer;
         this.questionID = questionID;

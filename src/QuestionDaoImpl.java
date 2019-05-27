@@ -102,7 +102,7 @@ public class QuestionDaoImpl implements QuestionDao {
     public void insertElement(Question question) {
         try {
             connection=JDBCUtils.getConnetion();
-            String sql="INSERT INTO question(tag_one,tag_two,tag_three,title,description,whoasked,hassolved) VALUES(?,?,?,?,?,?,?);";//插入语句
+            String sql="INSERT INTO question(tag_ONE,tag_TWO,tag_THREE,Title,description, whoasked , hassolved) VALUES(?,?,?,?,?,?,?);";//插入语句
             ps=connection.prepareStatement(sql);
             ps.setString(1,question.getTag_ONE());//使用prepareStatement可以防止sql注入
             ps.setString(2,question.getTag_TWO());
@@ -120,7 +120,4 @@ public class QuestionDaoImpl implements QuestionDao {
             JDBCUtils.close(connection, ps, rs);
         }
     }
-
-
-
 }

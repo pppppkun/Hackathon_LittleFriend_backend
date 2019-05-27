@@ -42,12 +42,12 @@ public class AnswerDaoImpl implements AnswerDao{
     public void insertElement(Answer answer) {
         try {
             connection=JDBCUtils.getConnetion();
-            String sql="INSERT INTO answer(answer,questionid,answersid) VALUES(?,?,?);";//插入语句
+            String sql="INSERT INTO answer(answer,questionID,asnID,asnvalue) VALUES(?,?,?,?);";//插入语句
             ps=connection.prepareStatement(sql);
             ps.setString(1,answer.getAnswer());//使用prepareStatement可以防止sql注入
             ps.setInt(2,answer.getQuestionID());
             ps.setInt(3,answer.getAnswersID());
-
+            ps.setInt(4,answer.getValue());
             //执行更新语句
             ps.executeUpdate();
         } catch (Exception e) {
