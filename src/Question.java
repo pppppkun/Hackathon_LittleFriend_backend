@@ -5,7 +5,7 @@ public class Question {
     private String tag_ONE;
     private String tag_TWO;
     private String tag_THREE;
-    private String ID;
+    private int ID;
     private String Title;
     private String description;
     private boolean hassolved;
@@ -16,13 +16,14 @@ public class Question {
 
     }
 
-    public Question(String one, String two, String three, String title, String description,String us) {
+    public Question(String one, String two, String three, String title, String description,String us,boolean hassolved) {
         tag_ONE = one;
         tag_TWO = two;
         tag_THREE = three;
         this.Title = title;
         this.description = description;
         whoasked = us;
+        this.hassolved = hassolved;
     }
 
     public Question(String one, String two, String three){
@@ -64,11 +65,11 @@ public class Question {
         this.tag_THREE = tag_THREE;
     }
 
-    public String getID() {
+    public int getID() {
         return ID;
     }
 
-    public void setID(String ID) {
+    public void setID(int ID) {
         this.ID = ID;
     }
 

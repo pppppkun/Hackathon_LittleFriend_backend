@@ -30,16 +30,20 @@ public class QuestionServiceImpl implements QuestionService {
 
     @Override
     public String takeQuestion(int ID) {
-        Map<String,Question> map = dao.findBaseId();
-        Question question = map.get(Integer.toString(ID));
+        Map<Integer,Question> map = dao.findBaseId();
+        Question question = map.get(ID);
         StringBuilder a = new StringBuilder();
         a.append(question.getTag_ONE()+" "+question.getTag_TWO()+" "+question.getTag_THREE()+" "+question.getTitle()+" "+question.getDescription());
         return a.toString();
     }
-    
+
+    @Override
     public Question takeQuestion(String title) {
         Map<String, Question> map = dao.findBaseTitle();
         Question question = map.get(title);
         return question;
     }
+
+
+
 }

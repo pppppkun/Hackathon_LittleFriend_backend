@@ -108,7 +108,7 @@ public class LoginServlet extends HttpServlet {
         String Title = request.getParameter("title");
         String description = request.getParameter("Description");
         String askername = request.getParameter("username");
-        Question question = new Question(tag_one, tag_two, tag_three, Title , description, askername);
+        Question question = new Question(tag_one, tag_two, tag_three, Title , description, askername , false);
         return Qservice.register(question);
     }
 

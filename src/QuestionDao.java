@@ -7,4 +7,5 @@ public interface QuestionDao {
     //提问人提问的时候插入问题
     public void insertElement(Question question);
 
+
 }

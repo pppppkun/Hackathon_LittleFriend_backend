@@ -24,7 +24,7 @@ public class AnswerDaoImpl implements AnswerDao{
             list=new ArrayList<Answer>();
 
             while(rs.next()) {
-                Answer answer = new Answer(rs.getString(2),rs.getString(3),rs.getString(4));
+                Answer answer = new Answer(rs.getString(2),rs.getInt(3),rs.getInt(4));
                 list.add(answer);
             }
 
@@ -45,8 +45,8 @@ public class AnswerDaoImpl implements AnswerDao{
             String sql="INSERT INTO answer(answer,questionid,answersid) VALUES(?,?,?);";//插入语句
             ps=connection.prepareStatement(sql);
             ps.setString(1,answer.getAnswer());//使用prepareStatement可以防止sql注入
-            ps.setString(2,answer.getQuestionID());
-            ps.setString(3,answer.getAnswersID());
+            ps.setInt(2,answer.getQuestionID());
+            ps.setInt(3,answer.getAnswersID());
 
             //执行更新语句
             ps.executeUpdate();

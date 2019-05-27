@@ -63,7 +63,7 @@ public class UserDaoImpl implements UserDao {
             while(rs.next()) {
                 User user = new User();
                 user.setUsername(rs.getString(2));
-                user.setId(rs.getString(1));
+                user.setId(rs.getInt(1));
                 map.put(user.getUsername(), user);
             }
         } catch (Exception e) {

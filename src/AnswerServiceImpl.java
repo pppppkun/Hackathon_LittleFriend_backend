@@ -8,7 +8,7 @@ public class AnswerServiceImpl implements AnswerService{
     @Override
     public String register(Answer answer) {
         //检查是否有任意一项的内容是空
-        if(answer.getAnswer()!=null&&answer.getAnswersID()!=null&&answer.getQuestionID()!=null){
+        if(answer.getAnswer()!=null){
             dao.insertElement(answer);
             return "回答成功";
         }

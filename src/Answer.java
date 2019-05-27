@@ -2,11 +2,11 @@ public class Answer {
 
     private String answer;
 
-    private String questionID;
+    private int questionID;
 
-    private String answersID;
+    private int answersID;
 
-    public Answer(String answer, String questionID, String answersID) {
+    public Answer(String answer, int questionID, int answersID) {
         this.answer = answer;
         this.questionID = questionID;
         this.answersID = answersID;
@@ -20,19 +20,19 @@ public class Answer {
         this.answer = answer;
     }
 
-    public String getQuestionID() {
+    public int getQuestionID() {
         return questionID;
     }
 
-    public void setQuestionID(String questionID) {
+    public void setQuestionID(int questionID) {
         this.questionID = questionID;
     }
 
-    public String getAnswersID() {
+    public int getAnswersID() {
         return answersID;
     }
 
-    public void setAnswersID(String answersID) {
+    public void setAnswersID(int answersID) {
         this.answersID = answersID;
     }
 }
